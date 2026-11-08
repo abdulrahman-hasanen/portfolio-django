@@ -12,4 +12,4 @@ dependencies = [
 ]
 
 [tool.vercel.scripts]
-build = 'DATABASE_URL="$DATABASE_URL_UNPOOLED" python manage.py migrate --noinput'
+build = 'python manage.py migrate --noinput'
