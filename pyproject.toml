@@ -1,2 +1,15 @@
+[project]
+name = "abdulrahman-portfolio-django"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "Django>=6.1.2,<6.2",
+    "Pillow>=10.0",
+    "whitenoise>=6.7",
+    "gunicorn>=22.0",
+    "dj-database-url>=2.2,<3.0",
+    "psycopg[binary]>=3.2,<4.0",
+]
+
 [tool.vercel.scripts]
 build = 'DATABASE_URL="$DATABASE_URL_UNPOOLED" python manage.py migrate --noinput'
