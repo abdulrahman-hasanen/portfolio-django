@@ -1,0 +1,41 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Database
+db.sqlite3
+db.sqlite3-journal
+
+# Uploaded media: keep project images in Git
+media/*
+!media/projects/
+!media/projects/**
+
+# Generated static files
+staticfiles/
+
+# Tailwind CLI binary
+tools/tailwindcss*
+
+# Testing and cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

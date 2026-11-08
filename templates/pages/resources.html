@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Resources | Abdulrahman Hasanen{% endblock %}
+
+{% block meta_description %}Official documentation Abdulrahman Hasanen uses to keep learning: Python, Django, and the web platform.{% endblock %}
+
+{% block content %}
+<section class="relative overflow-hidden bg-surface-1 px-6 pb-20 pt-32 lg:pb-24">
+    <div class="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-blue-600/[0.08] blur-[120px]"></div>
+    <div class="relative mx-auto max-w-7xl">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">Learning Resources</span>
+        <h1 class="mt-4 text-4xl font-extrabold text-white sm:text-5xl">
+            References I use to keep learning.
+        </h1>
+        <p class="mt-5 max-w-2xl leading-7 text-slate-400">
+            A short collection of official documentation for the technologies I work with.
+        </p>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer"
+                class="group rounded-2xl border border-slate-700/50 bg-surface-3 p-6 transition-colors hover:border-blue-500/60">
+                <i class="fa-brands fa-python text-2xl text-yellow-400"></i>
+                <h2 class="mt-4 text-lg font-bold text-white group-hover:text-blue-300">Python</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-400">Official language tutorial and reference.</p>
+            </a>
+            <a href="https://docs.djangoproject.com/en/stable/" target="_blank" rel="noopener noreferrer"
+                class="group rounded-2xl border border-slate-700/50 bg-surface-3 p-6 transition-colors hover:border-blue-500/60">
+                <i class="fa-solid fa-server text-2xl text-emerald-400"></i>
+                <h2 class="mt-4 text-lg font-bold text-white group-hover:text-blue-300">Django</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-400">Official documentation for Django web development.</p>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener noreferrer"
+                class="group rounded-2xl border border-slate-700/50 bg-surface-3 p-6 transition-colors hover:border-blue-500/60">
+                <i class="fa-brands fa-html5 text-2xl text-orange-400"></i>
+                <h2 class="mt-4 text-lg font-bold text-white group-hover:text-blue-300">Web platform</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-400">HTML, CSS, JavaScript, and browser references on MDN.</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

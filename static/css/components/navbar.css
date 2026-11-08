@@ -1,0 +1,16 @@
+/* =====================================================
+   NAVBAR COMPONENT - CUSTOM ENHANCEMENTS
+===================================================== */
+
+/* Smooth navigation between page sections */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

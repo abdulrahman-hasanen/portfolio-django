@@ -1,0 +1,1239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me | Abdulrahman Hasanen{% endblock %}
+
+{% block meta_description %}About Abdulrahman Hasanen: Computer Science studies at Assiut University, coursework,
+project experience, and the technologies he works with.{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'js/components/scroll-reveal.js' %}" defer></script>
+<script src="{% static 'js/pages/about.js' %}" defer></script>
+
+{% endblock %}
+
+
+{% block content %}
+
+<main class="about-page overflow-hidden bg-surface-0 text-white">
+
+    <!-- =========================================================
+     01. ABOUT HERO — MODERN DEVELOPER INTRO
+========================================================= -->
+    <section id="about-top" aria-labelledby="about-hero-title"
+        class="about-hero relative isolate overflow-hidden bg-[#050914] pt-20 pb-12 text-white sm:pt-24 sm:pb-16 lg:min-h-[620px] lg:pt-24 lg:pb-14">
+
+        <!-- Background Grid -->
+        <div class="pointer-events-none absolute inset-0 opacity-[0.10] [background-image:linear-gradient(rgba(148,163,184,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.07)_1px,transparent_1px)] [background-size:52px_52px]"
+            aria-hidden="true"></div>
+
+
+        <!-- Ambient Lighting -->
+        <div class="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-blue-600/[0.10] blur-[120px]"
+            aria-hidden="true"></div>
+
+        <div class="pointer-events-none absolute right-[15%] top-10 h-96 w-96 rounded-full bg-indigo-600/[0.08] blur-[130px]"
+            aria-hidden="true"></div>
+
+
+        <!-- Main Container -->
+        <div
+            class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:min-h-[480px] lg:grid-cols-[1.12fr_0.88fr] lg:gap-8">
+
+
+            <!-- =============================================
+             LEFT: INTRODUCTION
+        ============================================== -->
+            <div class="about-hero-content relative z-20 order-2 lg:order-1">
+
+                <!-- Eyebrow -->
+                <div
+                    class="hero-enter hero-delay-1 relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                    <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                    <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                        COMPUTER SCIENCE STUDENT
+                    </span>
+
+                </div>
+
+                <!-- Main Heading -->
+                <h1 id="about-hero-title" data-about-title
+                    class="hero-enter hero-delay-2 about-hero-title max-w-2xl text-[clamp(2.8rem,5vw,4.5rem)] font-extrabold leading-[1.08] tracking-[-0.055em] text-white">
+
+                    Hi, I'm
+
+                    <span class="bg-gradient-to-r via-indigo-400 to-violet-400 bg-clip-text text-blue-400 ">
+                        Abdulrahman.
+                    </span>
+
+                </h1>
+
+                <!-- Introduction -->
+                <div class="hero-enter hero-delay-3 about-hero-copy mt-5 max-w-xl space-y-3">
+
+                    <p class="text-sm leading-7 text-slate-300 sm:text-[15px]">
+
+                        I'm a Computer Science student at
+                        <strong class="font-semibold text-white">
+                            Assiut University
+                        </strong>,
+                        interested in software engineering, problem-solving,
+                        and building practical applications.
+
+                    </p>
+
+                    <p class="text-[13px] leading-7 text-slate-400 sm:text-sm">
+
+                        Through university coursework and personal projects,
+                        I'm strengthening my programming foundations and
+                        exploring different areas of software development.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Location / Education -->
+                <div
+                    class="hero-enter hero-delay-4 mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-slate-400">
+
+                    <span class="inline-flex items-center gap-2">
+
+                        <i class="fa-solid fa-location-dot text-blue-400"></i>
+
+                        Assiut, Egypt
+
+                    </span>
+
+                    <span class="inline-flex items-center gap-2">
+
+                        <i class="fa-solid fa-graduation-cap text-blue-400"></i>
+
+                        Assiut University
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- Action Buttons -->
+                <div class="hero-enter hero-delay-5 about-hero-actions mt-7 flex flex-wrap items-center gap-3">
+
+                    <!-- Primary Action -->
+                    <a href="#about-projects" class="btn btn--primary btn--lg">
+
+                        View My Work
+
+                        <i class="fa-solid fa-arrow-up-right-from-square btn__icon"></i>
+
+                    </a>
+
+
+                    <!-- Download CV -->
+                    <a href="{% static 'files/Abdulrahman_Hasanen_Full_Stack_Intern_CV.pdf' %}"
+                        download="Abdulrahman_Hasanen_Full_Stack_Intern_CV.pdf" class="btn btn--secondary btn--lg">
+
+                        Download CV
+
+                        <i class="fa-solid fa-download btn__icon"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- =============================================
+             RIGHT: PROFILE VISUAL
+             Reference-inspired cutout composition
+        ============================================== -->
+            <div class="hero-visual-enter about-hero-visual group relative isolate order-1 mx-auto flex min-h-[390px] w-full max-w-[520px] items-end justify-center sm:min-h-[460px] lg:order-2 lg:min-h-[510px]"
+                data-about-tilt>
+
+                <!-- Decorative Dots -->
+                <div class="pointer-events-none absolute right-[5%] top-[8%] z-0 h-20 w-20 opacity-50 [background-image:radial-gradient(#94a3b8_1.2px,transparent_1.2px)] [background-size:12px_12px]"
+                    aria-hidden="true"></div>
+
+
+                <!-- Main Gradient Circle -->
+                <div class="hero-glow pointer-events-none absolute bottom-[7%] left-1/2 z-0 aspect-square w-[76%] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-600 via-blue-600 to-indigo-950 shadow-[0_0_90px_rgba(79,70,229,0.25)] transition-transform duration-700 group-hover:scale-[1.04]"
+                    aria-hidden="true"></div>
+
+
+                <!-- Circle Soft Outline -->
+                <div class="pointer-events-none absolute bottom-[4%] left-1/2 z-0 aspect-square w-[83%] -translate-x-1/2 rounded-full border border-blue-300/20"
+                    aria-hidden="true"></div>
+
+
+                <!-- Profile Cutout -->
+                <div data-about-photo
+                    class="absolute inset-x-0 bottom-0 z-10 flex h-[96%] -translate-y-4 items-end justify-center">
+
+                    <img src="{% static 'images/pro.webp' %}" width="900" height="900" alt="Abdulrahman Hasanen"
+                        loading="eager" fetchpriority="high" decoding="async" draggable="false" class="h-full w-full origin-bottom scale-[1.05] object-contain object-bottom
+                    drop-shadow-[0_15px_30px_rgba(0,0,0,0.35)]
+                    transition-transform duration-700 ease-out
+                    group-hover:scale-[1.07]">
+
+                </div>
+
+
+                <!-- Floating Code Editor -->
+                <div
+                    class="hero-float hero-float-slow absolute right-0 top-[42%] z-30 hidden w-[205px] overflow-hidden rounded-xl border border-slate-600/50 bg-[#090F1B]/95 shadow-[0_15px_45px_rgba(0,0,0,0.55)] backdrop-blur-xl transition-transform duration-500 group-hover:-translate-y-1 sm:block lg:right-[-2%] lg:w-[220px]">
+
+                    <!-- Editor Header -->
+                    <div class="flex items-center justify-between border-b border-slate-700/70 px-3 py-2.5">
+
+                        <div class="flex items-center gap-2">
+
+                            <i class="fa-solid fa-code text-xs text-blue-400"></i>
+
+                            <span class="font-mono text-xs font-semibold text-slate-300">
+                                developer.py
+                            </span>
+
+                        </div>
+
+                        <div class="flex items-center gap-1.5">
+                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                            <span class="text-[8px] text-slate-400">Online</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Code -->
+                    <div class="overflow-hidden px-3 py-3 font-mono text-xs leading-[1.9] sm:text-xs">
+
+                        <div>
+                            <span class="text-violet-400">student</span>
+                            <span class="text-slate-400"> = {</span>
+                        </div>
+
+                        <div class="pl-3">
+                            <span class="text-slate-400">"name":</span>
+                            <span class="text-emerald-300"> "Abdulrahman"</span>,
+                        </div>
+
+                        <div class="pl-3">
+                            <span class="text-slate-400">"field":</span>
+                            <span class="text-amber-300"> "Computer Science"</span>,
+                        </div>
+
+                        <div class="pl-3">
+                            <span class="text-slate-400">"interests":</span>
+                            <span class="text-blue-300"> ["Software", "Problem Solving"]</span>,
+                        </div>
+
+                        <div class="pl-3">
+                            <span class="text-slate-400">"focus":</span>
+                            <span class="text-emerald-300"> "Learning & Building"</span>
+                        </div>
+
+                        <div class="text-slate-400">
+                            };
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Laptop Foreground -->
+                <div class="pointer-events-none absolute bottom-0 left-1/2 z-20 w-[70%] -translate-x-1/2"
+                    aria-hidden="true">
+
+                    <!-- Laptop Screen / Lid -->
+                    <div
+                        class="relative h-[48px] overflow-hidden rounded-t-xl border border-b-0 border-slate-600/50 bg-gradient-to-b from-[#202734] to-[#0B111B] shadow-[0_-8px_30px_rgba(0,0,0,0.35)] sm:h-[90px]">
+
+                        <div class="absolute inset-x-0 top-0 h-px bg-white/10"></div>
+
+                        <div class="absolute left-1/2 top-0.5 h-1 w-1 -translate-x-1/2 rounded-full bg-slate-500"></div>
+
+                    </div>
+
+                    <!-- Laptop Base -->
+                    <div
+                        class="relative mx-[-3%] h-2 rounded-b-full border border-t-slate-500/50 border-slate-700/70 bg-gradient-to-b from-[#687386] to-[#1A2230] shadow-xl">
+                    </div>
+
+                </div>
+
+
+                <!-- Floating Learning Badge -->
+                <div
+                    class="hero-float hero-float-delay absolute left-[1%] top-[25%] z-30 hidden items-center gap-2 rounded-lg border border-blue-300/20 bg-[#0B1426]/95 px-3 py-2 shadow-xl backdrop-blur-md sm:flex">
+
+                    <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></span>
+
+                    <span class="font-mono text-[8px] font-bold tracking-wider text-blue-100">
+                        ALWAYS LEARNING
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        </div>
+
+
+
+        <!-- Bottom Accent -->
+        <div class="pointer-events-none absolute bottom-0 left-0 h-[2px] w-1/3 bg-gradient-to-r from-blue-600 via-indigo-500 to-transparent"
+            aria-hidden="true"></div>
+    </section>
+
+    <!-- =========================================
+                 02. A FEW DETAILS
+            ========================================== -->
+    <section id="about-details"
+        class="relative isolate overflow-hidden border-b border-slate-800/60 bg-[#070B14] py-20 sm:py-24">
+
+        <!-- Background Glow -->
+        <div class="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-blue-600/[0.08] blur-[110px]"
+            aria-hidden="true"></div>
+
+        <div class="relative mx-auto max-w-7xl px-6">
+
+            <!-- Heading Content -->
+            <div class="relative mb-12 max-w-2xl" data-about-reveal="up">
+
+                <!-- Background Title -->
+                <span
+                    class="pointer-events-none absolute -left-2 top-0 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
+                    aria-hidden="true">
+                    ABOUT ME
+                </span>
+
+                <!-- Eyebrow -->
+                <div
+                    class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                    <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                    <span class="relative z-10 text-[10px] font-bold uppercase tracking-[0.17em] text-slate-300">
+                        A QUICK SNAPSHOT
+                    </span>
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                        A Little
+                    </span>
+
+                    About Me
+
+                </h2>
+
+                <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+                    A few details about my academic journey, where I come from, and the goals I'm working toward.
+                </p>
+
+            </div>
+
+            <!-- Details Grid -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+                <!-- Academic Year -->
+                <article
+                    class="group relative overflow-hidden border border-slate-800/80 bg-[#0B1220] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-blue-400/40"
+                    data-about-reveal="up" data-about-delay="0">
+
+                    <!-- Top Accent -->
+                    <div
+                        class="absolute left-0 top-0 h-[2px] w-12 bg-gradient-to-r from-blue-500 to-cyan-300 transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <!-- Background Number -->
+                    <span
+                        class="pointer-events-none absolute -right-2 top-5 text-8xl font-black leading-none text-white/[0.025] transition-colors duration-500 group-hover:text-blue-400/[0.06]">
+                        03
+                    </span>
+
+                    <div class="relative z-10">
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-400">
+                            ACADEMIC YEAR
+                        </span>
+
+                        <div class="mt-8 flex items-baseline gap-1">
+                            <span class="text-5xl font-black tracking-tight text-white" data-count-up="3">3</span>
+                            <span class="text-lg font-bold text-blue-400">rd</span>
+                        </div>
+
+                        <div class="mt-5 h-px w-full bg-slate-800"></div>
+
+                        <p class="mt-4 text-sm text-slate-400">
+                            Computer Science Student
+                        </p>
+
+                    </div>
+                </article>
+
+                <!-- Graduation -->
+                <article
+                    class="group relative overflow-hidden border border-slate-800/80 bg-[#0B1220] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-blue-400/40"
+                    data-about-reveal="up" data-about-delay="100">
+
+                    <div
+                        class="absolute left-0 top-0 h-[2px] w-12 bg-gradient-to-r from-blue-500 to-cyan-300 transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <span
+                        class="pointer-events-none absolute -right-2 top-5 text-8xl font-black leading-none text-white/[0.025] transition-colors duration-500 group-hover:text-blue-400/[0.06]">
+                        28
+                    </span>
+
+                    <div class="relative z-10">
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-400">
+                            EXPECTED GRADUATION
+                        </span>
+
+                        <div class="mt-8">
+                            <span class="text-5xl font-black tracking-tight text-white" data-count-up="2028">2028</span>
+                        </div>
+
+                        <div class="mt-5 h-px w-full bg-slate-800"></div>
+
+                        <p class="mt-4 text-sm text-slate-400">
+                            Assiut University
+                        </p>
+
+                    </div>
+                </article>
+
+                <!-- Location -->
+                <article
+                    class="group relative overflow-hidden border border-slate-800/80 bg-[#0B1220] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-blue-400/40"
+                    data-about-reveal="up" data-about-delay="200">
+
+                    <div
+                        class="absolute left-0 top-0 h-[2px] w-12 bg-gradient-to-r from-blue-500 to-cyan-300 transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <span
+                        class="pointer-events-none absolute -right-2 top-5 text-8xl font-black leading-none text-white/[0.025] transition-colors duration-500 group-hover:text-blue-400/[0.06]">
+                        EG
+                    </span>
+
+                    <div class="relative z-10">
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-400">
+                            BASED IN
+                        </span>
+
+                        <div class="mt-8">
+                            <span class="text-5xl font-black tracking-tight text-white">
+                                Assiut<span class="text-blue-400">.</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-5 h-px w-full bg-slate-800"></div>
+
+                        <p class="mt-4 text-sm text-slate-400">
+                            Egypt · Open to opportunities
+                        </p>
+
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+         02. MY BACKGROUND
+    ========================================== -->
+    <section id="background" class="relative overflow-hidden border-b border-slate-800/60 bg-surface-2 py-20 lg:py-24">
+
+        <!-- Subtle Background Glow -->
+        <div class="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-blue-600/10 blur-[100px]"
+            aria-hidden="true">
+        </div>
+
+        <div class="pointer-events-none absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-blue-500/10 blur-[110px]"
+            aria-hidden="true">
+        </div>
+
+
+        <div class="relative mx-auto max-w-7xl px-6">
+
+            <div class="grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-16">
+
+
+                <!-- =====================================
+                     LEFT: EDUCATION
+                ====================================== -->
+                <div data-reveal="up">
+
+                    <!-- Heading -->
+                    <div class="flex items-center gap-3 border-b border-slate-800/80 pb-5">
+
+                        <span
+                            class="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 text-blue-400">
+                            <i class="fa-solid fa-graduation-cap text-lg"></i>
+                        </span>
+
+                        <div>
+                            <h2 class="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
+                                Education
+                            </h2>
+
+                            <p class="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                                Academic Background
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Education Timeline -->
+                    <div class="relative mt-8 space-y-9
+
+                        before:absolute
+                        before:bottom-3
+                        before:left-[7px]
+                        before:top-2
+                        before:w-px
+                        before:bg-gradient-to-b
+                        before:from-blue-500/80
+                        before:via-blue-500/40
+                        before:to-transparent
+                    ">
+
+
+                        <!-- University -->
+                        <article data-reveal="up" data-reveal-delay="0" class="relative pl-10">
+
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+                            <h3 class="text-base font-bold leading-snug text-white">
+                                Assiut University
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-slate-400">
+                                Faculty of Computers and Information
+                                <span class="text-slate-600">·</span>
+                                Computer Science
+                            </p>
+
+                            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>Expected Graduation: 2028</span>
+                            </div>
+
+                            <p class="mt-2 text-xs text-slate-400">
+                                Currently in my third year.
+                            </p>
+
+                        </article>
+
+
+                        <!-- Programming Fundamentals -->
+                        <article data-reveal="up" data-reveal-delay="120" class="relative pl-10">
+
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+                            <h3 class="text-base font-bold leading-snug text-white">
+                                Programming & CS Fundamentals
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-slate-400">
+                                Programming with C, C++, and Java, alongside
+                                Object-Oriented Programming (OOP), Data Structures,
+                                and Problem-Solving fundamentals.
+                            </p>
+
+                            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+                                <i class="fa-solid fa-code text-xs"></i>
+                                <span>Programming Coursework</span>
+                            </div>
+
+                            <p class="mt-2 text-xs text-slate-400">
+                                Understanding programming concepts, code structure,
+                                and working with data.
+                            </p>
+
+                        </article>
+
+
+                        <!-- Software Engineering -->
+                        <article data-reveal="up" data-reveal-delay="240" class="relative pl-10">
+
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+                            <h3 class="text-base font-bold leading-snug text-white">
+                                Software Engineering & Visual Programming
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-slate-400">
+                                Studying Software Engineering concepts and
+                                building desktop interfaces using C# and
+                                Windows Forms.
+                            </p>
+
+                            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+                                <i class="fa-solid fa-laptop-code text-xs"></i>
+                                <span>C# · Windows Forms</span>
+                            </div>
+
+                            <p class="mt-2 text-xs text-slate-400">
+                                Working with GUI controls and event-driven programming.
+                            </p>
+
+                        </article>
+
+
+                        <!-- Computer Networks -->
+                        <article data-reveal="up" data-reveal-delay="360" class="relative pl-10">
+
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+                            <h3 class="text-base font-bold leading-snug text-white">
+                                Computer Networks
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-slate-400">
+                                Learning networking fundamentals, HTTP,
+                                DNS, and email communication protocols.
+                            </p>
+
+                            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+                                <i class="fa-solid fa-network-wired text-xs"></i>
+                                <span>Networking Coursework</span>
+                            </div>
+
+                            <p class="mt-2 text-xs text-slate-400">
+                                Understanding how applications communicate
+                                over computer networks.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =====================================
+                     RIGHT: PROJECT EXPERIENCE
+                ====================================== -->
+                <div data-reveal="up" data-reveal-delay="120">
+
+                    <!-- Heading -->
+                    <div class="flex items-center gap-3 border-b border-slate-800/80 pb-5">
+
+                        <span
+                            class="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 text-blue-400">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </span>
+
+                        <div>
+                            <h2 class="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
+                                Experience
+                            </h2>
+
+                            <p class="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                                Project-Based Work
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Experience Timeline -->
+                    <div class="relative mt-8 space-y-9
+
+                        before:absolute
+                        before:bottom-3
+                        before:left-[7px]
+                        before:top-2
+                        before:w-px
+                        before:bg-gradient-to-b
+                        before:from-blue-500/80
+                        before:via-blue-500/40
+                        before:to-transparent
+                    ">
+
+
+                        <!-- Project 01 -->
+                        <article data-reveal="up" data-reveal-delay="0" class="relative pl-10">
+
+                            <!-- Timeline Dot -->
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+
+                            <div>
+
+                                <h3 class="text-base font-bold leading-snug text-white">
+                                    Al-Husseiny Contracting Website
+                                </h3>
+
+                                <p class="mt-2 text-sm leading-6 text-slate-400">
+                                    Front-End Developer
+                                </p>
+
+
+                                <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+
+                                    <i class="fa-solid fa-code text-xs"></i>
+
+                                    <span>
+                                        HTML5 · CSS3 · JavaScript
+                                    </span>
+
+                                </div>
+
+                                <p class="mt-2 text-xs text-slate-400">
+                                    Building a responsive company website.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- Project 02 -->
+                        <article data-reveal="up" data-reveal-delay="120" class="relative pl-10">
+
+                            <!-- Timeline Dot -->
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+
+                            <div>
+
+                                <h3 class="text-base font-bold leading-snug text-white">
+                                    Personal Developer Portfolio
+                                </h3>
+
+                                <p class="mt-2 text-sm leading-6 text-slate-400">
+                                    Full-Stack Web Development
+                                </p>
+
+
+                                <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+
+                                    <i class="fa-solid fa-code text-xs"></i>
+
+                                    <span>
+                                        Python · Django · SQLite
+                                    </span>
+
+                                </div>
+
+                                <p class="mt-2 text-xs text-slate-400">
+                                    Developing a dynamic, database-driven portfolio.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- Project 03 -->
+                        <article data-reveal="up" data-reveal-delay="240" class="relative pl-10">
+
+                            <!-- Timeline Dot -->
+                            <span
+                                class="absolute left-0 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface-2 bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)]"></span>
+
+
+                            <div>
+
+                                <h3 class="text-base font-bold leading-snug text-white">
+                                    CenterPlus Echo
+                                </h3>
+
+                                <p class="mt-2 text-sm leading-6 text-slate-400">
+                                    Desktop Application Project
+                                </p>
+
+
+                                <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400">
+
+                                    <i class="fa-solid fa-desktop text-xs"></i>
+
+                                    <span>
+                                        Electron · JavaScript · npm
+                                    </span>
+
+                                </div>
+
+                                <p class="mt-2 text-xs text-slate-400">
+                                    Working with desktop application technologies.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     03. PROJECT SHOWCASE
+========================================================= -->
+    <section id="about-projects"
+        class="relative isolate overflow-hidden border-y border-slate-800/60 bg-surface-1 py-16 sm:py-20 lg:py-24">
+
+        <!-- Ambient Background -->
+        <div class="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-blue-600/[0.09] blur-[120px]"
+            aria-hidden="true"></div>
+
+        <div class="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-sky-500/[0.06] blur-[120px]"
+            aria-hidden="true"></div>
+
+
+
+        <div class="relative mx-auto max-w-7xl px-5 sm:px-6">
+
+
+            <!-- Section Heading -->
+            <div data-reveal="up" class="mb-10 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
+
+                <!-- Heading Content -->
+                <div class="max-w-2xl">
+                    <span
+                        class="pointer-events-none absolute -left-2 top-0 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
+                        aria-hidden="true">
+                        PROJECTS
+                    </span>
+
+
+                    <!-- Eyebrow -->
+                    <div
+                        class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                        <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                        <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                        <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                        <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                        <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                            SELECTED WORK
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Main Heading -->
+                    <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+
+                        <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                            Projects I've
+                        </span>
+
+                        Built
+
+                    </h2>
+
+                    <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+
+                        A collection of personal and academic projects where I apply what I learn, explore different
+                        technologies, and build practical applications.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Projects Counter -->
+                <div
+                    class="flex items-center gap-4 self-start rounded-xl border border-blue-400/15 bg-surface-3/70 px-4 py-3 md:self-auto">
+
+                    <div
+                        class="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-500/10 text-lg text-blue-400">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="font-mono text-2xl font-extrabold leading-none text-white">
+
+                            {{ projects|length|stringformat:"02d" }}
+
+                        </div>
+
+                        <span class="mt-2 block text-[8px] font-bold uppercase tracking-[0.16em] text-slate-400">
+
+                            PUBLISHED PROJECTS
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+
+                {% for project in projects %}
+
+                {% include "includes/project_card.html" with project=project project_number=forloop.counter %}
+
+
+                {% empty %}
+
+
+                <!-- Empty State -->
+                <div
+                    class="col-span-full overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-surface-3 to-[#080D18] px-6 py-16 text-center">
+
+                    <div
+                        class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 text-xl text-blue-400">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+
+                    <h3 class="mt-5 text-lg font-extrabold text-white sm:text-xl">
+
+                        Projects are on their way.
+
+                    </h3>
+
+
+                    <p class="mx-auto mt-3 max-w-md text-sm leading-7 text-slate-400">
+
+                        New work will appear here as soon as it is published.
+                        Stay tuned for upcoming projects.
+
+                    </p>
+
+                </div>
+
+
+                {% endfor %}
+
+            </div>
+
+
+
+            <!-- Bottom Section Note -->
+            {% if projects %}
+
+            <div class="mt-9 flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/70 pt-5">
+
+                <span class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+
+                    DESIGNED · DEVELOPED · BUILT THROUGH PRACTICE
+
+                </span>
+
+                <span class="font-mono text-xs text-blue-400">
+
+                    {{ projects|length|stringformat:"02d" }} / PROJECTS
+
+                </span>
+
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         04. TECHNICAL SKILLS
+    ========================================================= -->
+    <section id="technologies"
+        class="relative isolate overflow-hidden border-y border-white/[0.06] bg-surface-1 py-20 sm:py-24">
+
+        <!-- Background Glow -->
+        <div class="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-blue-600/[0.08] blur-[120px]"
+            aria-hidden="true"></div>
+
+        <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+            <!-- Section Heading -->
+            <div data-reveal="up" class="relative mb-10 max-w-3xl md:mb-12">
+
+                <!-- Background Watermark -->
+                <span
+                    class="pointer-events-none absolute -left-2 top-0 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
+                    aria-hidden="true">
+                    TECHNOLOGY
+                </span>
+
+                <!-- Eyebrow -->
+                <div
+                    class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                    <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                    <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                        MY TOOLKIT
+                    </span>
+
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                        Technologies I
+                    </span>
+
+                    Work With.
+
+                </h2>
+
+                <!-- Description -->
+                <p class="relative mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+
+                    The tools and technologies I use while learning,
+                    developing, and building practical projects.
+
+                </p>
+
+            </div>
+
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+
+
+                <!-- 01: Languages -->
+                <article data-reveal="left"
+                    class="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0D1422] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-[#111C30] sm:p-7">
+
+                    <div class="flex items-center justify-between">
+
+                        <span
+                            class="text-4xl font-black tracking-tighter text-white/[0.08] transition-colors group-hover:text-blue-400/20">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-code text-xl text-blue-400"></i>
+
+                    </div>
+
+                    <h3 class="mt-6 text-lg font-bold text-white">
+                        Programming Languages
+                    </h3>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+
+                        <span
+                            class="rounded-lg border border-blue-400/30 bg-blue-500/10 px-3 py-2 text-xs font-bold text-blue-300">
+                            Python
+                        </span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">C</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">C++</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">Java</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">C#</span>
+
+                    </div>
+
+                    <div class="mt-7 h-px w-full bg-gradient-to-r from-blue-500/40 to-transparent"></div>
+
+                </article>
+
+
+
+                <!-- 02: Web & Backend -->
+                <article data-reveal="up" data-reveal-delay="100"
+                    class="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0D1422] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-[#111C30] sm:p-7">
+
+                    <div class="flex items-center justify-between">
+
+                        <span
+                            class="text-4xl font-black tracking-tighter text-white/[0.08] transition-colors group-hover:text-blue-400/20">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-globe text-xl text-cyan-400"></i>
+
+                    </div>
+
+                    <h3 class="mt-6 text-lg font-bold text-white">
+                        Web & Backend
+                    </h3>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+
+                        <span
+                            class="rounded-lg border border-blue-400/30 bg-blue-500/10 px-3 py-2 text-xs font-bold text-blue-300">
+                            Django
+                        </span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">HTML5</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">CSS3</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">JavaScript</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">Tailwind
+                            CSS</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">MySQL</span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">SQLite</span>
+
+                    </div>
+
+                    <div class="mt-7 h-px w-full bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
+
+                </article>
+
+
+
+                <!-- 03: Developer Tools -->
+                <article data-reveal="right" data-reveal-delay="200"
+                    class="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0D1422] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-[#111C30] sm:p-7 md:col-span-2 xl:col-span-1">
+
+                    <div class="flex items-center justify-between">
+
+                        <span
+                            class="text-4xl font-black tracking-tighter text-white/[0.08] transition-colors group-hover:text-blue-400/20">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-screwdriver-wrench text-xl text-indigo-400"></i>
+
+                    </div>
+
+                    <h3 class="mt-6 text-lg font-bold text-white">
+                        Developer Tools
+                    </h3>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">
+                            Git
+                        </span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">
+                            GitHub
+                        </span>
+
+                        <span
+                            class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-medium text-slate-300">
+                            VS Code
+                        </span>
+
+                    </div>
+
+                    <div class="mt-7 h-px w-full bg-gradient-to-r from-indigo-500/40 to-transparent"></div>
+
+                </article>
+
+            </div>
+
+
+            <!-- Foundations -->
+            <div data-reveal="up"
+                class="mt-5 flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#0D1422]/80 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-blue-400">
+                        Core Foundations
+                    </span>
+
+                    <p class="mt-2 text-sm font-semibold text-white">
+                        OOP <span class="mx-2 text-slate-700">/</span>
+                        Data Structures <span class="mx-2 text-slate-700">/</span>
+                        Problem Solving <span class="mx-2 text-slate-700">/</span>
+                        SQL
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-arrow-right-long hidden text-xl text-blue-400/60 sm:block"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Accent -->
+        <div class="pointer-events-none absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"
+            aria-hidden="true"></div>
+
+    </section>
+
+
+</main>
+
+{% endblock %}

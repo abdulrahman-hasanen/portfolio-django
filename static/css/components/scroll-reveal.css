@@ -1,0 +1,210 @@
+/* =========================================================
+   HERO ANIMATIONS
+========================================================= */
+
+/* Entry Animation */
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        translate: 0 22px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.hero-enter {
+    opacity: 0;
+    animation: heroFadeUp 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered Delays */
+.hero-delay-1 {
+    animation-delay: 80ms;
+}
+
+.hero-delay-2 {
+    animation-delay: 160ms;
+}
+
+.hero-delay-3 {
+    animation-delay: 240ms;
+}
+
+.hero-delay-4 {
+    animation-delay: 320ms;
+}
+
+.hero-delay-5 {
+    animation-delay: 400ms;
+}
+
+.hero-delay-6 {
+    animation-delay: 480ms;
+}
+
+.hero-delay-7 {
+    animation-delay: 560ms;
+}
+
+.hero-delay-8 {
+    animation-delay: 640ms;
+}
+
+
+/* Portrait Entrance */
+@keyframes heroVisualReveal {
+    from {
+        opacity: 0;
+        translate: 0 18px;
+        scale: 0.96;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+.hero-visual-enter {
+    opacity: 0;
+    animation: heroVisualReveal 1000ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
+}
+
+
+/* Floating Badges */
+@keyframes heroFloat {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -7px;
+    }
+}
+
+.hero-float {
+    animation: heroFloat 5s ease-in-out infinite;
+}
+
+.hero-float-delay {
+    animation-delay: 900ms;
+}
+
+.hero-float-slow {
+    animation-duration: 6.5s;
+    animation-delay: 500ms;
+}
+
+
+/* Main Abstract Shape */
+@keyframes heroGlow {
+
+    0%,
+    100% {
+        opacity: 1;
+        filter: saturate(1);
+    }
+
+    50% {
+        opacity: 0.82;
+        filter: saturate(1.15);
+    }
+}
+
+.hero-glow {
+    animation: heroGlow 7s ease-in-out infinite;
+}
+
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-enter,
+    .hero-visual-enter,
+    .hero-float,
+    .hero-glow {
+        animation: none !important;
+        opacity: 1 !important;
+        translate: none !important;
+        scale: none !important;
+        filter: none !important;
+    }
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+html.js-reveal-ready [data-reveal] {
+    opacity: 0;
+    will-change: opacity, translate;
+}
+
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        translate: 0 28px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes revealLeft {
+    from {
+        opacity: 0;
+        translate: -28px 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes revealRight {
+    from {
+        opacity: 0;
+        translate: 28px 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+html.js-reveal-ready [data-reveal][data-revealed="true"] {
+    animation-duration: 750ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-delay: var(--reveal-delay, 0ms);
+    animation-fill-mode: both;
+}
+
+html.js-reveal-ready [data-reveal="up"][data-revealed="true"] {
+    animation-name: revealUp;
+}
+
+html.js-reveal-ready [data-reveal="left"][data-revealed="true"] {
+    animation-name: revealLeft;
+}
+
+html.js-reveal-ready [data-reveal="right"][data-revealed="true"] {
+    animation-name: revealRight;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.js-reveal-ready [data-reveal] {
+        opacity: 1 !important;
+        translate: none !important;
+        animation: none !important;
+    }
+}

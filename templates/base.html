@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Abdulrahman Hasanen | Software Engineer{% endblock %}</title>
+
+    <!-- SEO / sharing -->
+    <meta name="description" content="{% block meta_description %}
+A personal space showcasing projects, ideas, and creative work in technology and software development.
+{% endblock %}">
+    <meta name="theme-color" content="#0B0D13">
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Abdulrahman Hasanen">
+    <meta property="og:title" content="{% block og_title %}Abdulrahman Hasanen | Software Engineer{% endblock %}">
+    <meta property="og:description"
+        content="{% block og_description %}Computer Science student and aspiring software engineer. Projects, background, and contact details.{% endblock %}">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.png' %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+    {% block head_extra %}{% endblock %}
+
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/floating-actions.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/scroll-reveal.css' %}">
+
+
+
+    <!-- Button Design System — loaded after Tailwind to allow intentional overrides -->
+    <link rel="stylesheet" href="{% static 'css/components/buttons.css' %}">
+
+    {% block page_css %}{% endblock %}
+
+    <!-- Tailwind (built locally, see README). Loaded last, matching the cascade the CDN build had. -->
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-brand-dark text-slate-300 font-sans selection:bg-brand-blue selection:text-white antialiased">
+
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brand-blue focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
+        Skip to main content
+    </a>
+
+    <!-- استدعاء الهيدر -->
+    {% include 'includes/navbar.html' %}
+
+    <!-- المساحة المخصصة لمحتوى كل صفحة مستقلة -->
+    <main id="main-content" tabindex="-1" class="outline-none">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- استدعاء الفوتر -->
+    {% include 'includes/footer.html' %}
+
+    {% include 'includes/floating-actions.html' %}
+
+    <script src="{% static 'js/components/navbar.js' %}" defer></script>
+    <script src="{% static 'js/components/floating-actions.js' %}" defer></script>
+
+    {% block page_js %}{% endblock %}
+
+</body>
+
+</html>

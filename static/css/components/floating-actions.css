@@ -1,0 +1,14 @@
+/* =====================================================
+   FLOATING ACTIONS
+===================================================== */
+
+.floating-action:focus-visible {
+    outline: 2px solid #22D3EE;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-action {
+        transition: none !important;
+    }
+}

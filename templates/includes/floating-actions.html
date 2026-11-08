@@ -1,0 +1,36 @@
+<!-- =====================================================
+     FLOATING ACTIONS
+     Telegram + Back To Top
+===================================================== -->
+
+<div id="floating-actions" class="fixed bottom-5 right-5 z-[60] flex flex-col items-center gap-3">
+
+    <!-- Back To Top -->
+    <button id="back-to-top" type="button" disabled aria-label="Back to top" aria-hidden="true" data-visible="false"
+        class="floating-action group relative flex h-12 w-12
+        translate-y-3 pointer-events-none items-center justify-center
+        rounded-2xl border border-blue-500/30 bg-surface-3/95
+        text-blue-400 opacity-0 shadow-xl shadow-black/30
+        backdrop-blur-xl transition-all duration-300
+        hover:-translate-y-1 hover:border-blue-400
+        hover:bg-blue-600 hover:text-white
+        data-[visible=true]:pointer-events-auto
+        data-[visible=true]:translate-y-0
+        data-[visible=true]:opacity-100">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+
+
+    <!-- Telegram -->
+    <a href="https://t.me/AbdulrahmanHasanen" target="_blank" rel="noopener noreferrer"
+        aria-label="Contact me on Telegram" title="Chat with me on Telegram" class="floating-action group relative flex h-14 w-14
+        items-center justify-center rounded-2xl
+        border border-sky-300/20 bg-[#229ED9]
+        text-white shadow-xl shadow-sky-500/20
+        transition-all duration-300
+        hover:-translate-y-1 hover:scale-105
+        hover:bg-[#168AC4] hover:shadow-sky-500/40">
+        <i class="fa-brands fa-telegram text-3xl"></i>
+    </a>
+
+</div>

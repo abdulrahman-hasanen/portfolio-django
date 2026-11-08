@@ -1,0 +1,229 @@
+<!-- =========================================================
+     SHARED PROJECT CARD
+     Minimal Editorial Showcase
+     Home + Projects
+========================================================= -->
+
+<article data-reveal="up"
+    class="group flex h-full min-w-0 flex-col border-l border-white/[0.14] pl-4 pr-2 transition-all duration-300 hover:border-blue-500/60 sm:pl-5">
+
+    <!-- =============================================
+         PROJECT INDEX
+    ============================================== -->
+    <div class="flex items-center gap-3">
+
+        <!-- Status Indicator -->
+        {% if project.status == "Done" %}
+
+        <span class="h-3.5 w-3.5 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.35)]"
+            title="{{ project.get_status_display }}" role="img" aria-label="{{ project.get_status_display }}"></span>
+
+        {% elif project.status == "Active" %}
+
+        <span class="h-3.5 w-3.5 shrink-0 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.35)]"
+            title="{{ project.get_status_display }}" role="img" aria-label="{{ project.get_status_display }}"></span>
+
+        {% else %}
+
+        <span class="h-3.5 w-3.5 shrink-0 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.30)]"
+            title="{{ project.get_status_display }}" role="img" aria-label="{{ project.get_status_display }}"></span>
+
+        {% endif %}
+
+
+        <!-- Project Number -->
+        <span class="shrink-0 font-mono text-[12px] font-semibold tracking-wider text-slate-300">
+
+            {{ project_number|stringformat:"02d" }}
+
+        </span>
+
+
+        <!-- Horizontal Rule -->
+        <div
+            class="h-px flex-1 bg-gradient-to-r from-slate-500/50 to-transparent transition-all duration-500 group-hover:from-blue-400/70">
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =============================================
+         PROJECT IMAGE
+    ============================================== -->
+    <div class="relative mt-5 aspect-[16/9] overflow-hidden border border-white/[0.07] bg-[#111722]">
+
+        {% if project.image %}
+
+        <img src="{{ project.image.url }}" alt="{{ project.title }}" loading="lazy" decoding="async"
+            class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]">
+
+        {% else %}
+
+        <!-- Image Fallback -->
+        <div
+            class="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#17233A] to-[#090E18] text-blue-400">
+
+            <i
+                class="fa-solid fa-code text-4xl transition-transform duration-500 group-hover:scale-110"></i>
+
+            <span class="max-w-[80%] text-center text-sm font-bold text-white">
+
+                {{ project.title }}
+
+            </span>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- Image Hover Overlay -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050914]/30 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-100"
+            aria-hidden="true"></div>
+
+    </div>
+
+
+
+    <!-- =============================================
+         PROJECT INFORMATION
+    ============================================== -->
+    <div class="flex flex-1 flex-col pt-5">
+
+
+        <!-- Project Role -->
+        {% if project.role %}
+
+        <span class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-400">
+
+            {{ project.role }}
+
+        </span>
+
+        {% endif %}
+
+
+
+        <!-- Project Title -->
+        <h3
+            class="text-xl font-extrabold leading-snug tracking-tight text-white transition-colors duration-300 group-hover:text-blue-300 sm:text-[22px]">
+
+            {{ project.title }}
+
+        </h3>
+
+
+
+        <!-- Project Description -->
+        <p class="mt-3 min-h-[66px] flex-1 text-[15px] leading-6 text-slate-400 sm:text-[12px]">
+
+            {% if project.description %}
+
+            {{ project.description|striptags }}
+
+            {% elif project.subtitle %}
+
+            {{ project.subtitle }}
+
+            {% else %}
+
+            A practical project built through learning and development.
+
+            {% endif %}
+
+        </p>
+
+
+
+        <!-- =============================================
+             TECHNOLOGY TAG
+        ============================================== -->
+        {% if project.tech_stack %}
+
+        <div class="mt-5 pb-4">
+
+            <span class="inline-flex max-w-full items-center gap-2 rounded-full border border-slate-500/40 px-3.5 py-2">
+
+                <i class="fa-solid fa-code text-xs text-blue-400"></i>
+
+                <span
+                    class="truncate font-mono text-xs font-semibold uppercase tracking-[0.10em] text-slate-300 sm:text-xs">
+                    {{ project.tech_stack }}
+                </span>
+
+            </span>
+
+        </div>
+
+        {% endif %}
+
+
+
+        <!-- =============================================
+             PROJECT LINKS
+        ============================================== -->
+        <div class="mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/[0.10] pt-5">
+
+
+            <!-- GitHub Repository -->
+            {% if project.github_url %}
+
+            <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer"
+                aria-label="View {{ project.title }} repository on GitHub"
+                class="group/link inline-flex items-center gap-2 text-xs font-semibold text-slate-300 transition-colors duration-300 hover:text-white">
+
+                <i
+                    class="fa-brands fa-github text-base text-slate-400 transition-colors group-hover/link:text-white"></i>
+
+                <span>Repository</span>
+
+                <i
+                    class="fa-solid fa-arrow-up-right-from-square text-xs text-blue-400 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"></i>
+
+            </a>
+
+            {% endif %}
+
+
+
+            <!-- Live Website -->
+            {% if project.live_url %}
+
+            <a href="{{ project.live_url }}" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit {{ project.title }} live website"
+                class="group/link inline-flex items-center gap-2 text-xs font-semibold text-slate-300 transition-colors duration-300 hover:text-white">
+
+                <i class="fa-solid fa-arrow-up-right-from-square text-[13px] text-blue-400"></i>
+
+                <span>Live Website</span>
+
+                <i
+                    class="fa-solid fa-arrow-right text-xs text-slate-400 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:text-cyan-400"></i>
+
+            </a>
+
+            {% endif %}
+
+
+
+            <!-- No Links -->
+            {% if not project.github_url and not project.live_url %}
+
+            <span class="inline-flex items-center gap-2 text-xs text-slate-400">
+
+                <i class="fa-regular fa-clock"></i>
+
+                Links coming soon
+
+            </span>
+
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+</article>

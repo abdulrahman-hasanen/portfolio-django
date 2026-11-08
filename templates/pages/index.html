@@ -1,0 +1,1281 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Abdulrahman Hasanen | Software Engineer{% endblock %}
+
+{% block meta_description %}Portfolio of Abdulrahman Hasanen, Computer Science student at Assiut University. Web projects built with Python, Django, HTML, CSS and JavaScript.{% endblock %}
+
+{% block head_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abdulrahman Hasanen",
+  "jobTitle": "Computer Science Student",
+  "affiliation": {"@type": "CollegeOrUniversity", "name": "Assiut University"},
+  "sameAs": [
+    "https://github.com/abdulrahman-hasanen",
+    "https://www.linkedin.com/in/abdulrahman-hasanen"
+  ]
+}
+</script>
+{% endblock %}
+
+{% block page_js %}
+<script src="{% static 'js/components/scroll-reveal.js' %}" defer></script>
+<script src="{% static 'js/pages/home.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+
+<!-- =========================================================
+     01. HERO SECTION
+========================================================= -->
+<section id="home" class="relative isolate overflow-hidden bg-surface-0 text-white pt-20 pb-6 lg:pt-20">
+
+    <!-- Background Grid -->
+    <div class="pointer-events-none absolute inset-0 opacity-25
+        [background-image:linear-gradient(rgba(37,99,236,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,236,0.07)_1px,transparent_1px)]
+        [background-size:64px_64px]"></div>
+
+    <!-- Ambient Lighting -->
+    <div class="pointer-events-none absolute -left-40 -top-48 h-[420px] w-[420px]
+        rounded-full bg-blue-700/[0.08] blur-[120px]"></div>
+
+    <div class="pointer-events-none absolute -right-32 top-32 h-[420px] w-[420px]
+        rounded-full bg-blue-600/[0.08] blur-[130px]"></div>
+
+
+    <!-- Hero Container -->
+    <div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center
+        gap-8 px-6 lg:grid-cols-2 lg:gap-8">
+
+        <!-- LEFT: PERSONAL INTRODUCTION -->
+        <div class="relative z-20 py-5 lg:py-8">
+
+            <!-- Introduction Badge -->
+            <div class="hero-enter hero-delay-1 inline-flex items-center gap-2.5
+                    border border-blue-500/30 bg-blue-500/[0.08]
+                    px-4 py-2 text-xs font-semibold tracking-wide text-blue-300">
+
+                <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                    COMPUTER SCIENCE STUDENT
+                </span>
+
+                <i class="fa-solid fa-code text-cyan-400"></i>
+
+            </div>
+
+
+            <!-- Education Label -->
+            <p class="hero-enter hero-delay-2 mb-3 mt-6 text-xs font-medium uppercase
+                tracking-[0.18em] text-slate-400 sm:text-xs">
+                OPEN TO INTERNSHIPS · FREELANCE PROJECTS · COLLABORATION
+            </p>
+
+
+            <!-- Main Heading -->
+            <h1 class="hero-enter hero-delay-3 text-4xl font-extrabold leading-[1.08]
+                tracking-tight text-white sm:text-5xl lg:text-[62px]">
+                Abdulrahman
+
+                <span class="block bg-gradient-to-r from-white via-blue-200 to-blue-500
+                    bg-clip-text text-transparent">
+                    Hasanen.
+                </span>
+            </h1>
+
+            <!-- Description -->
+            <p class="hero-enter hero-delay-5 mt-4 max-w-lg text-sm leading-7 text-slate-400
+                sm:text-base sm:leading-7">
+                I'm a Computer Science student at Assiut University, interested in software engineering and building
+                practical
+                applications. I'm continuously developing my programming skills through learning and hands-on projects.
+            </p>
+
+
+            <!-- CTA Buttons -->
+            <div class="hero-enter hero-delay-6 mt-7 flex flex-wrap items-center gap-3">
+
+                <!-- Primary Button -->
+                <a href="#projects" class="btn btn--primary btn--lg">
+                    Explore My Projects
+                    <i class="fa-solid fa-arrow-right btn__icon"></i>
+                </a>
+
+                <!-- Secondary Button -->
+                <a href="#about" class="btn btn--secondary btn--lg">
+                    More About Me
+                    <i class="fa-regular fa-user btn__icon"></i>
+                </a>
+
+            </div>
+
+
+
+            <!-- Social Links -->
+            <div class="hero-enter hero-delay-7 mt-7 flex items-center gap-3">
+
+                <a href="https://github.com/abdulrahman-hasanen" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub" class="flex h-10 w-10 items-center justify-center
+                    rounded-xl border border-slate-700/60 bg-surface-3
+                    text-slate-300 transition-all duration-300
+                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-github text-lg"></i>
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/abdulrahman-hasanen" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn" class="flex h-10 w-10 items-center justify-center
+                    rounded-xl border border-slate-700/60 bg-surface-3
+                    text-slate-300 transition-all duration-300
+                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-linkedin-in text-base"></i>
+                </a>
+
+
+
+                <a href="https://instagram.com/abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram" class="flex h-10 w-10 items-center justify-center
+                    rounded-xl border border-slate-700/60 bg-surface-3
+                    text-slate-300 transition-all duration-300
+                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+
+                <a href="https://facebook.com/abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook" class="flex h-10 w-10 items-center justify-center
+                                    rounded-xl border border-slate-700/60 bg-surface-3
+                                    text-slate-300 transition-all duration-300
+                                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-facebook text-lg"></i>
+                </a>
+
+
+                <a href="https://tiktok.com/@abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
+                    aria-label="TikTok" class="flex h-10 w-10 items-center justify-center
+                                    rounded-xl border border-slate-700/60 bg-surface-3
+                                    text-slate-300 transition-all duration-300
+                                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-tiktok text-lg"></i>
+                </a>
+
+                <a href="https://twitter.com/3bdohasanen" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="flex h-10 w-10 items-center justify-center
+                                                    rounded-xl border border-slate-700/60 bg-surface-3
+                                                    text-slate-300 transition-all duration-300
+                                                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-twitter text-lg"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT: PERSONAL PORTRAIT -->
+        <div
+            class="hero-visual-enter group relative mx-auto flex min-h-[380px] w-full max-w-[500px] items-center justify-center sm:min-h-[420px] lg:min-h-[440px]">
+
+            <!-- Main Abstract Shape -->
+            <div class="absolute h-[76%] w-[76%] rotate-[-8deg]
+                rounded-[47%_50%_50%_47%]
+                bg-gradient-to-br from-blue-500 via-blue-700 to-[#101B48]
+                shadow-[0_0_85px_rgba(37,99,236,0.4)] hero-glow
+                transition-transform duration-700 ease-out
+                group-hover:scale-[1.045]">
+            </div>
+
+
+            <!-- Outer Ring -->
+            <div class="absolute h-[88%] w-[88%] rounded-full
+                border border-cyan-400/25"></div>
+
+
+            <!-- Decorative Elements -->
+            <div class="absolute right-[8%] top-[7%] h-16 w-16
+                rotate-45 rounded-full border-t-2 border-cyan-400/70"></div>
+
+            <div class="absolute bottom-[10%] left-[7%] h-20 w-20
+                -rotate-45 rounded-full border-b-2 border-blue-400/60"></div>
+
+
+            <!-- Portrait -->
+            <div data-reveal="left" class="relative z-10 flex h-[360px] w-full max-w-[600px]
+                -translate-y-10
+                items-end justify-center sm:h-[420px]">
+
+                <img src="{% static 'images/pro1.webp' %}" width="900" height="900" alt="Abdulrahman Hasanen" loading="eager" fetchpriority="high"
+                    decoding="async" draggable="false" class="h-full w-full object-contain object-bottom
+                    drop-shadow-[0_15px_30px_rgba(0,0,0,0.35)]
+                    transition-transform duration-700 ease-out
+                    group-hover:scale-[1.025]">
+
+            </div>
+
+            <!-- Problem Solving Badge -->
+            <div class="absolute left-0 top-[20%] z-20 flex items-center
+            gap-2.5 rounded-xl border border-blue-500/50 hero-float
+            bg-surface-3/95 px-3.5 py-2.5 shadow-xl
+            shadow-blue-950/30 backdrop-blur-xl sm:left-[-1%]">
+
+            <i class="fa-solid fa-brain text-xl text-cyan-400"></i>
+
+            <span class="text-xs font-bold text-white sm:text-sm">
+                Problem Solving
+            </span>
+
+        </div>
+
+        <!-- Software Development Badge -->
+        <div class="absolute right-0 top-[45%] z-20 flex items-center
+            gap-2.5 rounded-xl border border-cyan-500/40 hero-float hero-float-delay
+            bg-surface-3/95 px-3.5 py-2.5 shadow-xl
+            backdrop-blur-xl sm:right-[-1%]">
+
+            <i class="fa-solid fa-laptop-code text-xl text-blue-400"></i>
+
+            <span class="text-xs font-bold text-white sm:text-sm">
+                Software Development
+            </span>
+
+        </div>
+
+            <!-- Code Editor Card -->
+            <div class="absolute bottom-[8%] left-0 z-20 w-[205px]
+                overflow-hidden rounded-xl border border-blue-400/50 hero-float hero-float-slow
+                bg-[#0B1220]/95 shadow-2xl shadow-black/50
+                backdrop-blur-xl sm:bottom-[7%] sm:left-[-3%] sm:w-[250px]">
+
+                <!-- Editor Header -->
+                <div class="flex items-center gap-1.5 border-b
+                    border-slate-700/70 px-3 py-2.5">
+                    <span class="h-2.5 w-2.5 rounded-full bg-red-500"></span>
+                    <span class="h-2.5 w-2.5 rounded-full bg-yellow-400"></span>
+                    <span class="h-2.5 w-2.5 rounded-full bg-green-500"></span>
+
+                    <span class="ml-auto font-mono text-xs text-slate-400">
+                        main.py
+                    </span>
+                </div>
+
+
+                <!-- Editor Code -->
+                <pre class="p-3 font-mono text-xs leading-5 text-slate-200 sm:text-xs"><code><span class="text-pink-400">def</span> <span class="text-cyan-400">build_solution</span>():
+    <span class="text-pink-400">return</span> <span class="text-green-400">"Ideas into reality"</span></code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     02. AREAS I'M EXPLORING
+========================================================= -->
+<section id="focus"
+    class="relative isolate overflow-hidden border-y border-white/[0.06] bg-[#08090D] py-16 sm:py-20 lg:py-24">
+
+    <!-- Background Lighting -->
+    <div class="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-blue-600/[0.09] blur-[120px]"
+        aria-hidden="true"></div>
+
+    <div class="pointer-events-none absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-cyan-500/[0.07] blur-[120px]"
+        aria-hidden="true"></div>
+
+
+
+    <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+
+        <!-- =============================================
+             SECTION HEADING
+        ============================================== -->
+        <div data-reveal="up" class="relative mx-auto mb-12 max-w-3xl text-center sm:mb-14">
+
+            <!-- Background Watermark -->
+            <span
+                class="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
+                aria-hidden="true">
+                EXPLORE
+            </span>
+
+
+            <!-- Eyebrow -->
+            <div
+                class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                    MY LEARNING PATH
+                </span>
+
+            </div>
+
+
+
+            <!-- Main Heading -->
+            <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+
+                <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                    Areas
+                </span>
+
+                I'm Exploring
+
+            </h2>
+
+
+            <!-- Description -->
+            <p class="relative mx-auto mt-4 max-w-xl text-[13px] leading-7 text-slate-400 sm:text-sm">
+
+                I'm continuously exploring different areas of computer science,
+                building my knowledge, and developing practical skills.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =============================================
+             AREAS GRID
+        ============================================== -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+
+
+            <!-- =====================================
+                 CARD 01: SOFTWARE ENGINEERING
+            ====================================== -->
+            <article data-reveal="up" data-reveal-delay="0"
+                class="group relative rounded-[20px] border border-white/[0.07] bg-[#121316] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-[#151923] hover:shadow-[0_15px_40px_rgba(37,99,235,0.10)] sm:p-7">
+
+                <!-- Side Accent -->
+                <span
+                    class="absolute -left-[5px] top-8 h-20 w-[5px] rounded-full bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)] transition-all duration-500 group-hover:h-24 group-hover:bg-cyan-400"
+                    aria-hidden="true"></span>
+
+
+                <!-- Icon -->
+                <div
+                    class="flex h-[68px] w-[68px] items-center justify-center rounded-full border border-white/[0.06] bg-[#25272D] text-blue-400 transition-all duration-300 group-hover:bg-blue-500/15 group-hover:text-cyan-300">
+
+                    <i class="fa-solid fa-diagram-project text-2xl"></i>
+
+                </div>
+
+
+
+                <!-- Content -->
+                <div class="mt-6">
+
+                    <span class="text-xs font-bold uppercase tracking-[0.15em] text-blue-400">
+                        THINK · DESIGN · BUILD
+                    </span>
+
+                    <h3
+                        class="mt-2 text-xl font-extrabold text-white transition-colors duration-300 group-hover:text-blue-300">
+                        Software Engineering
+                    </h3>
+
+                    <p class="mt-3 min-h-[66px] text-[13px] leading-6 text-slate-400">
+                        Learning how software is planned, designed,
+                        developed, tested, and improved to solve
+                        real-world problems.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Footer -->
+                <div class="mt-5 flex items-center justify-between border-t border-white/[0.07] pt-4">
+
+                    <span
+                        class="text-xs font-semibold text-slate-300 transition-colors duration-300 group-hover:text-blue-300">
+                        Explore this area
+                    </span>
+
+                    <span
+                        class="flex h-7 w-7 items-center justify-center rounded-full text-blue-400 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-blue-500/10 group-hover:text-cyan-300">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+
+            <!-- =====================================
+                 CARD 02: COMPUTER SCIENCE
+            ====================================== -->
+            <article data-reveal="up" data-reveal-delay="120"
+                class="group relative rounded-[20px] border border-white/[0.07] bg-[#121316] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-[#151923] hover:shadow-[0_15px_40px_rgba(37,99,235,0.10)] sm:p-7">
+
+                <!-- Side Accent -->
+                <span
+                    class="absolute -left-[5px] top-8 h-20 w-[5px] rounded-full bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)] transition-all duration-500 group-hover:h-24 group-hover:bg-cyan-400"
+                    aria-hidden="true"></span>
+
+
+                <!-- Icon -->
+                <div
+                    class="flex h-[68px] w-[68px] items-center justify-center rounded-full border border-white/[0.06] bg-[#25272D] text-blue-400 transition-all duration-300 group-hover:bg-blue-500/15 group-hover:text-cyan-300">
+
+                    <i class="fa-solid fa-brain text-2xl"></i>
+
+                </div>
+
+
+
+                <!-- Content -->
+                <div class="mt-6">
+
+                    <span class="text-xs font-bold uppercase tracking-[0.15em] text-blue-400">
+                        LOGIC · THINKING · PROBLEM SOLVING
+                    </span>
+
+                    <h3
+                        class="mt-2 text-xl font-extrabold text-white transition-colors duration-300 group-hover:text-blue-300">
+                        Computer Science
+                    </h3>
+
+                    <p class="mt-3 min-h-[66px] text-[13px] leading-6 text-slate-400">
+                        Strengthening my understanding of programming,
+                        Object-Oriented Programming, Data Structures,
+                        Algorithms, and problem-solving.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Footer -->
+                <div class="mt-5 flex items-center justify-between border-t border-white/[0.07] pt-4">
+
+                    <span
+                        class="text-xs font-semibold text-slate-300 transition-colors duration-300 group-hover:text-blue-300">
+                        Explore this area
+                    </span>
+
+                    <span
+                        class="flex h-7 w-7 items-center justify-center rounded-full text-blue-400 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-blue-500/10 group-hover:text-cyan-300">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+
+            <!-- =====================================
+                 CARD 03: APPLICATION DEVELOPMENT
+            ====================================== -->
+            <article data-reveal="up" data-reveal-delay="240"
+                class="group relative rounded-[20px] border border-white/[0.07] bg-[#121316] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-[#151923] hover:shadow-[0_15px_40px_rgba(37,99,235,0.10)] sm:p-7 md:col-span-2 xl:col-span-1">
+
+                <!-- Side Accent -->
+                <span
+                    class="absolute -left-[5px] top-8 h-20 w-[5px] rounded-full bg-blue-500 shadow-[0_0_14px_rgba(59,130,246,0.55)] transition-all duration-500 group-hover:h-24 group-hover:bg-cyan-400"
+                    aria-hidden="true"></span>
+
+
+                <!-- Icon -->
+                <div
+                    class="flex h-[68px] w-[68px] items-center justify-center rounded-full border border-white/[0.06] bg-[#25272D] text-blue-400 transition-all duration-300 group-hover:bg-blue-500/15 group-hover:text-cyan-300">
+
+                    <i class="fa-solid fa-laptop-code text-2xl"></i>
+
+                </div>
+
+
+
+                <!-- Content -->
+                <div class="mt-6">
+
+                    <span class="text-xs font-bold uppercase tracking-[0.15em] text-blue-400">
+                        EXPLORE · CREATE · IMPROVE
+                    </span>
+
+                    <h3
+                        class="mt-2 text-xl font-extrabold text-white transition-colors duration-300 group-hover:text-blue-300">
+                        Application Development
+                    </h3>
+
+                    <p class="mt-3 min-h-[66px] text-[13px] leading-6 text-slate-400">
+                        Applying what I learn through web and desktop
+                        projects while exploring different tools
+                        and technologies.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Footer -->
+                <div class="mt-5 flex items-center justify-between border-t border-white/[0.07] pt-4">
+
+                    <span
+                        class="text-xs font-semibold text-slate-300 transition-colors duration-300 group-hover:text-blue-300">
+                        Explore this area
+                    </span>
+
+                    <span
+                        class="flex h-7 w-7 items-center justify-center rounded-full text-blue-400 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-blue-500/10 group-hover:text-cyan-300">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- Bottom Statement -->
+        <div data-reveal="up"
+            class="mt-9 flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] pt-5">
+
+            <p class="text-xs font-medium text-slate-400">
+                Still learning. Always building. Never stopping.
+            </p>
+
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-cyan-400">
+
+                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-400"></span>
+
+                CURRENTLY EXPLORING
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03. FEATURED PROJECTS
+========================================================= -->
+<section id="projects" class="border-b border-brand-border bg-brand-dark/50 py-16 sm:py-20 lg:py-24">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6">
+
+        <!-- Section Heading -->
+        <!-- =============================================
+                     SECTION HEADING
+                ============================================== -->
+        <div data-reveal="up" class="relative mx-auto mb-12 max-w-3xl text-center sm:mb-14">
+
+            <!-- Background Watermark -->
+            <span
+                class="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
+                aria-hidden="true">
+                PROJECTS
+            </span>
+
+
+            <!-- Eyebrow -->
+            <div
+                class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                    RECENT WORK
+                </span>
+
+            </div>
+
+
+
+            <!-- Main Heading -->
+            <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+
+                <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                    A Glimpse of My
+                </span>
+
+                Latest Projects.
+
+            </h2>
+
+
+            <!-- Description -->
+            <p class="relative mx-auto mt-4 max-w-xl text-[13px] leading-7 text-slate-400 sm:text-sm">
+
+                A look at some of my recent projects, where I put what I've learned
+                into practice and explore different technologies.
+            </p>
+
+        </div>
+
+
+
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+            {% for project in projects %}
+
+            {% include "includes/project_card.html" with project=project project_number=forloop.counter %}
+
+            {% empty %}
+
+            <!-- Empty State -->
+            <div class="col-span-full rounded-2xl border border-brand-border bg-brand-card px-6 py-14 text-center">
+
+                <i class="fa-solid fa-folder-open text-3xl text-blue-400"></i>
+
+                <h3 class="mt-4 text-lg font-bold text-white">
+                    Projects coming soon.
+                </h3>
+
+                <p class="mt-2 text-sm text-slate-400">
+                    Published projects will appear here.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+
+        <!-- All Projects Link -->
+        <div class="mt-10 text-center">
+
+            <a href="{% url 'about' %}#about-projects" class="btn btn--secondary btn--lg">
+
+                Explore All Projects
+
+                <i class="fa-solid fa-arrow-right btn__icon"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04. ABOUT PREVIEW
+========================================================= -->
+<section id="about" class="relative overflow-hidden bg-surface-1 py-20 lg:py-24">
+
+    <!-- Background Lighting -->
+    <div class="pointer-events-none absolute -left-40 top-20
+        h-96 w-96 rounded-full bg-blue-700/10 blur-[120px]"></div>
+
+
+    <div class="relative mx-auto grid max-w-7xl grid-cols-1
+        items-center gap-12 px-6 lg:grid-cols-2 lg:gap-14">
+
+        <!-- About Image -->
+        <!-- About Profile Card -->
+        <div data-reveal="left" class="relative mx-auto w-full max-w-[360px] p-3">
+
+            <!-- Blue Offset Frame -->
+            <div class="absolute inset-3 -translate-x-3 -translate-y-3
+                rounded-[24px] border-2 border-blue-600">
+            </div>
+
+            <!-- Main Profile Card -->
+            <div class="relative z-10 overflow-hidden rounded-[24px]
+                border border-[#263247] bg-[#111722]
+                shadow-2xl shadow-black/30">
+
+                <!-- Profile Image -->
+                <div class="relative h-[270px] overflow-hidden sm:h-[285px]">
+
+                    <img src="{% static 'images/photo1.webp' %}" width="800" height="800" alt="Abdulrahman Hasanen" loading="lazy"
+                        class="h-full w-full object-cover object-top">
+
+                    <!-- Image Overlay -->
+                    <div class="absolute inset-0
+                        bg-gradient-to-b from-transparent
+                        via-transparent to-[#111722]/50">
+                    </div>
+
+                </div>
+
+                <!-- Profile Information -->
+                <div class="bg-gradient-to-b from-[#111722] to-[#0B0F18]
+                    px-6 pb-6 pt-5">
+
+                    <span class="inline-flex rounded-md bg-blue-600
+                        px-3 py-1 text-xs font-bold text-white">
+                        CS Junior
+                    </span>
+
+                    <h3 class="mt-3 text-xl font-extrabold leading-snug text-white">
+                        Faculty of Computers & Information
+                    </h3>
+
+                    <p class="mt-1 text-sm text-slate-400">
+                        Assiut University <span class="text-blue-500">•</span> 3rd Year
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- About Content -->
+        <div data-reveal="right" class="mx-auto max-w-2xl lg:mx-0">
+
+            <span class="text-xs font-bold uppercase tracking-[0.2em]
+                text-cyan-400">
+                Behind The Code
+            </span>
+
+            <h2 class="mt-5 text-3xl font-extrabold leading-tight
+                text-white sm:text-4xl">
+                Curious by nature.
+
+                <span class="block text-blue-400">
+                    Developer in progress.
+                </span>
+            </h2>
+
+            <p class="mt-6 leading-8 text-slate-400">
+                I'm a Computer Science student at Assiut University interested in software engineering, problem-solving,
+                and building useful applications. Through coursework and practical projects, I'm developing my
+                programming skills and exploring different areas of software development.
+            </p>
+
+
+            <!-- About Information -->
+            <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+
+                <!-- Education -->
+                <div class="group relative overflow-hidden rounded-xl border border-white/[0.08]
+                            bg-[#0D1422] p-5 transition-all duration-300
+                            hover:-translate-y-1 hover:border-blue-400/30">
+
+                    <div class="absolute left-0 top-0 h-[2px] w-10
+                                bg-gradient-to-r from-blue-500 to-cyan-300
+                                transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-graduation-cap text-blue-400"></i>
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
+                            Education
+                        </span>
+                    </div>
+
+                    <h3 class="mt-4 text-sm font-bold text-white">
+                        Assiut University
+                    </h3>
+                </div>
+
+
+                <!-- Current Focus -->
+                <div class="group relative overflow-hidden rounded-xl border border-white/[0.08]
+                            bg-[#0D1422] p-5 transition-all duration-300
+                            hover:-translate-y-1 hover:border-cyan-400/30">
+
+                    <div class="absolute left-0 top-0 h-[2px] w-10
+                                bg-gradient-to-r from-cyan-500 to-blue-400
+                                transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-code text-cyan-400"></i>
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
+                            Current Focus
+                        </span>
+                    </div>
+
+                    <h3 class="mt-4 text-sm font-bold text-white">
+                        Software Development
+                    </h3>
+                </div>
+
+
+                <!-- Approach -->
+                <div class="group relative overflow-hidden rounded-xl border border-white/[0.08]
+                            bg-[#0D1422] p-5 transition-all duration-300
+                            hover:-translate-y-1 hover:border-indigo-400/30">
+
+                    <div class="absolute left-0 top-0 h-[2px] w-10
+                                bg-gradient-to-r from-indigo-500 to-blue-400
+                                transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-lightbulb text-indigo-400"></i>
+
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
+                            Approach
+                        </span>
+                    </div>
+
+                    <h3 class="mt-4 text-sm font-bold text-white">
+                        Learn by Building
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <a href="#contact" class="btn btn--ghost mt-8">
+                Let's connect
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     05. OPEN TO OPPORTUNITIES
+========================================================= -->
+<section id="contact-cta"
+    class="relative isolate overflow-hidden border-t border-blue-500/20 bg-gradient-to-r from-[#0B1426] via-[#0A1020] to-[#0D1930] py-12 sm:py-14">
+
+    <!-- Background Lighting -->
+    <div class="pointer-events-none absolute -right-24 -top-28 h-64 w-64 rounded-full bg-blue-600/[0.10] blur-[100px]"
+        aria-hidden="true"></div>
+
+    <div class="pointer-events-none absolute -bottom-32 left-1/3 h-56 w-56 rounded-full bg-cyan-500/[0.06] blur-[100px]"
+        aria-hidden="true"></div>
+
+
+    <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+        <!-- Main Content -->
+        <div class="flex flex-col justify-between gap-7 lg:flex-row lg:items-center lg:gap-10">
+
+            <!-- Text -->
+            <div data-reveal="left" class="max-w-2xl">
+
+                <div
+                    class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                    <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                    <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                    <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                        COMPUTER SCIENCE STUDENT
+                    </span>
+                </div>
+
+
+                <h2 class="text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
+
+                    Have an opportunity in mind?
+
+                    <span class="block mt-1 text-blue-400">
+                        Let's start a conversation.
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-4 max-w-xl text-[13px] leading-7 text-slate-400 sm:text-sm">
+                    I'm open to internship opportunities, collaborative projects,
+                    and suitable freelance work. Have something in mind?
+                    I'd be glad to hear from you.
+                </p>
+
+            </div>
+
+
+
+            <!-- Actions -->
+            <div data-reveal="right" class="flex shrink-0 flex-wrap items-center gap-3">
+
+                <!-- Contact Button -->
+                <a href="mailto:abdulrahmanhasanen.dev@gmail.com" class="btn btn--primary btn--lg">
+
+                    Let's Talk
+
+                    <i class="fa-regular fa-paper-plane btn__icon"></i>
+
+                </a>
+
+
+                <!-- Projects Button -->
+                <a href="#projects" class="btn btn--secondary btn--lg">
+
+                    View My Projects
+
+                    <i class="fa-solid fa-arrow-right text-xs text-blue-400 btn__icon"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Opportunity Types -->
+        <div data-reveal="up"
+            class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/[0.07] pt-5">
+
+            <span class="font-mono text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
+                INTERESTED IN
+            </span>
+
+
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
+
+                <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-400">
+
+                    <i class="fa-solid fa-graduation-cap text-blue-400"></i>
+
+                    Internships
+
+                </span>
+
+
+                <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-400">
+
+                    <i class="fa-solid fa-users text-blue-400"></i>
+
+                    Collaboration
+
+                </span>
+
+
+                <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-400">
+
+                    <i class="fa-solid fa-laptop-code text-blue-400"></i>
+
+                    Freelance Projects
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     05. CONTACT SECTION
+========================================================= -->
+<section id="contact" class="relative overflow-hidden bg-surface-1 py-14 sm:py-16">
+
+    <div class="relative mx-auto max-w-6xl px-5 sm:px-6">
+
+        <div class="grid overflow-hidden rounded-2xl border border-[#263247] bg-[#0B1220] lg:grid-cols-2">
+
+
+            <!-- =============================================
+                 LEFT: CONTACT INFORMATION
+            ============================================== -->
+            <div data-reveal="left" class="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+
+                <!-- Small Label -->
+                <span
+                    class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">
+
+                    <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+
+                    OPEN TO OPPORTUNITIES
+
+                </span>
+
+
+                <!-- Heading -->
+                <h2 class="mt-5 max-w-md text-3xl font-black leading-tight text-white sm:text-4xl">
+
+                    Let's Build Something
+
+                    <span class="text-blue-400">
+                        Useful.
+                    </span>
+
+                </h2>
+
+
+                <!-- Description -->
+                <p class="mt-4 max-w-md text-sm leading-7 text-slate-400">
+                    Have a project, an internship opportunity, or an idea
+                    for collaboration? Feel free to get in touch.
+                </p>
+
+
+
+                <!-- Contact Details -->
+                <div class="mt-7 space-y-4">
+
+
+                    <!-- Email -->
+                    <a href="mailto:abdulrahmanhasanen.dev@gmail.com"
+                        class="group flex items-center gap-3 text-sm text-slate-300 transition-colors hover:text-cyan-300">
+
+                        <span
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] text-cyan-400 transition-colors group-hover:bg-cyan-400/10">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+
+                        <span>
+                            abdulrahmanhasanen.dev@gmail.com
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- Telegram -->
+                    <a href="https://t.me/AbdulrahmanHasanen" target="_blank" rel="noopener noreferrer"
+                        class="group flex items-center gap-3 text-sm text-slate-300 transition-colors hover:text-cyan-300">
+
+                        <span
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] text-cyan-400 transition-colors group-hover:bg-cyan-400/10">
+                            <i class="fa-brands fa-telegram"></i>
+                        </span>
+
+                        <span>
+                            Telegram
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Social Links -->
+                <div class="mt-7 border-t border-white/[0.08] pt-5">
+
+                    <span class="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
+                        Find Me Online
+                    </span>
+
+
+                    <div class="mt-3 flex items-center gap-2">
+
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/abdulrahman-hasanen" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" title="GitHub"
+                            class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-300 transition-all hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-blue-400">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/abdulrahman-hasanen" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"
+                            class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-300 transition-all hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-blue-400">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+
+                        <!-- Codeforces -->
+                        <a href="https://codeforces.com/profile/3bdohasanen" target="_blank" rel="noopener noreferrer"
+                            aria-label="Codeforces" title="Codeforces"
+                            class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-300 transition-all hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-blue-400">
+                            <i class="fa-solid fa-trophy"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CV Download -->
+                <div class="mt-6">
+
+                    <a href="{% static 'files/Abdulrahman_Hasanen_Full_Stack_Intern_CV.pdf' %}"
+                        download="Abdulrahman_Hasanen_Full_Stack_Intern_CV.pdf" class="btn btn--primary btn--md">
+
+                        Download CV
+
+                        <i class="fa-solid fa-file-arrow-down btn__icon"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Availability -->
+                <p class="mt-6 text-xs text-slate-400">
+                    Internships <span class="mx-1 text-blue-400">·</span>
+                    Collaboration <span class="mx-1 text-blue-400">·</span>
+                    Freelance
+                </p>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 RIGHT: SIMPLE CONTACT FORM
+            ============================================== -->
+            <div data-reveal="right" class="flex flex-col justify-center bg-[#10234D] p-6 sm:p-8 lg:p-10">
+
+                <div class="mb-6">
+
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-blue-200">
+                        SEND A MESSAGE
+                    </span>
+
+                    <h3 class="mt-2 text-2xl font-extrabold text-white">
+                        Get In Touch
+                    </h3>
+
+                    <p class="mt-2 text-xs leading-6 text-blue-100/60">
+                        Fill in the details below and I'll get back to you.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Contact Form -->
+                <form id="contact-form" data-contact-form data-endpoint="{% url 'contact' %}" action="{% url 'contact' %}" method="post" class="space-y-3" novalidate>
+
+                    {% csrf_token %}
+
+                    <input type="hidden" id="contact-subject" name="subject" value="Portfolio Contact">
+
+                    <!-- Honeypot: hidden from people, bots fill it -->
+                    <div class="hidden" aria-hidden="true">
+                        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                    </div>
+
+
+                    <!-- Name -->
+                    <div>
+
+                        <label for="contact-name" class="mb-1.5 block text-xs font-semibold text-blue-100/80">
+                            Your Name
+                        </label>
+
+                        <input type="text" id="contact-name" name="name" placeholder="Enter your name"
+                            autocomplete="name" required minlength="2" maxlength="100"
+                            class="w-full rounded-lg border border-white/10 bg-white/[0.08] px-4 py-3 text-xs text-white outline-none transition-all placeholder:text-blue-100/40 focus:border-cyan-300/70 focus:bg-white/[0.12] focus:ring-1 focus:ring-cyan-300/20">
+
+                    </div>
+
+
+
+                    <!-- Email -->
+                    <div>
+
+                        <label for="contact-email" class="mb-1.5 block text-xs font-semibold text-blue-100/80">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="contact-email" name="email" placeholder="name@example.com"
+                            autocomplete="email" required maxlength="254"
+                            class="w-full rounded-lg border border-white/10 bg-white/[0.08] px-4 py-3 text-xs text-white outline-none transition-all placeholder:text-blue-100/40 focus:border-cyan-300/70 focus:bg-white/[0.12] focus:ring-1 focus:ring-cyan-300/20">
+
+                    </div>
+
+
+
+                    <!-- Message -->
+                    <div>
+
+                        <div class="mb-1.5 flex items-center justify-between gap-3">
+
+                            <label for="contact-message" class="block text-xs font-semibold text-blue-100/80">
+                                Your Message
+                            </label>
+
+                            <span id="message-counter" class="font-mono text-xs text-blue-100/50">
+                                0 / 1200
+                            </span>
+
+                        </div>
+
+
+                        <textarea id="contact-message" name="message" rows="4" minlength="10" maxlength="1200" required
+                            placeholder="Write your message..."
+                            class="w-full resize-y rounded-lg border border-white/10 bg-white/[0.08] px-4 py-3 text-xs leading-6 text-white outline-none transition-all placeholder:text-blue-100/40 focus:border-cyan-300/70 focus:bg-white/[0.12] focus:ring-1 focus:ring-cyan-300/20"></textarea>
+
+                    </div>
+
+
+
+                    <!-- Status -->
+                    <div id="contact-status" role="status" aria-live="polite"
+                        class="{% if messages %}{% for m in messages %}{% if m.level_tag == 'success' %}border-emerald-400/30 bg-emerald-500/10 text-emerald-200{% else %}border-red-400/30 bg-red-500/10 text-red-200{% endif %}{% endfor %}{% else %}hidden{% endif %} rounded-lg border px-3 py-2 text-xs leading-6">{% for m in messages %}{{ m }}{% endfor %}</div>
+
+
+
+                    <!-- Submit -->
+                    <button id="contact-submit" type="submit"
+                        class="group inline-flex items-center gap-3 rounded-full border border-blue-400/20 bg-[#080E1B] py-1.5 pl-2 pr-6 text-sm font-bold text-white shadow-lg shadow-black/20 transition-all duration-300 hover:bg-[#142746] hover:border-cyan-400/40 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-cyan-400/50 disabled:cursor-not-allowed disabled:opacity-60">
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-blue-700">
+                            <i id="contact-submit-icon"
+                                class="fa-solid fa-paper-plane text-sm transition-transform duration-300 group-hover:translate-x-0.5"></i>
+                        </span>
+
+                        <span id="contact-submit-text">
+                            Send Message
+                        </span>
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+{% endblock %}

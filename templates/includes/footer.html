@@ -1,0 +1,71 @@
+{% load static %}
+
+<!-- =========================================================
+     MINIMAL CENTERED FOOTER
+========================================================= -->
+<footer class="border-t border-slate-800/70 bg-surface-0">
+
+    <div class="mx-auto flex max-w-7xl flex-col items-center px-6 py-9">
+
+        <!-- Logo -->
+        <a href="{% url 'home' %}#home" aria-label="Abdulrahman Hasanen Home" class="inline-flex items-center justify-center">
+            <img src="{% static 'images/logo.webp' %}" width="240" height="180" alt="Abdulrahman Hasanen"
+                class="block h-12 w-auto max-w-[160px] object-contain" loading="lazy">
+        </a>
+
+
+        <!-- Social Accounts -->
+        <div class="mt-6 flex items-center justify-center gap-5">
+
+            <!-- GitHub -->
+            <a href="https://github.com/abdulrahman-hasanen" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub" title="GitHub"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-[#111827] text-slate-400 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-600/10 hover:text-white">
+                <i class="fa-brands fa-github text-lg"></i>
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/abdulrahman-hasanen" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn" title="LinkedIn"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-[#111827] text-slate-400 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-600/10 hover:text-blue-400">
+                <i class="fa-brands fa-linkedin-in text-lg"></i>
+            </a>
+
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram" title="Instagram"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-[#111827] text-slate-400 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-600/10 hover:text-white">
+                <i class="fa-brands fa-instagram text-base"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://facebook.com/abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook" title="Facebook"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-[#111827] text-slate-400 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-600/10 hover:text-white">
+                <i class="fa-brands fa-facebook-f text-base"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
+                aria-label="TikTok" title="TikTok"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-[#111827] text-slate-400 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-600/10 hover:text-white">
+                <i class="fa-brands fa-tiktok text-base"></i>
+            </a>
+
+        </div>
+
+
+        <!-- Divider -->
+        <div class="my-4 h-px w-full max-w-2xl bg-slate-800/70"></div>
+
+
+        <!-- Copyright -->
+        <p class="text-center text-xs font-medium text-slate-400">
+            © {% now "Y" %} Abdulrahman Hasanen. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
