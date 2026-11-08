@@ -118,6 +118,13 @@ if DATABASE_URL:
     DATABASES["default"]["DISABLE_SERVER_SIDE_CURSORS"] = True
 
 else:
+    if not DEBUG:
+        from django.core.exceptions import ImproperlyConfigured
+
+        raise ImproperlyConfigured(
+            "DATABASE_URL is required in production."
+        )
+
     # Local development database
     DATABASES = {
         "default": {
