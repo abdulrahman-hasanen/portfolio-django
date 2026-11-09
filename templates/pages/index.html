@@ -580,120 +580,8 @@
 </section>
 
 
-
 <!-- =========================================================
-     03. FEATURED PROJECTS
-========================================================= -->
-<section id="projects" class="border-b border-brand-border bg-brand-dark/50 py-16 sm:py-20 lg:py-24">
-
-    <div class="mx-auto max-w-7xl px-5 sm:px-6">
-
-        <!-- Section Heading -->
-        <!-- =============================================
-                     SECTION HEADING
-                ============================================== -->
-        <div data-reveal="up" class="relative mx-auto mb-12 max-w-3xl text-center sm:mb-14">
-
-            <!-- Background Watermark -->
-            <span
-                class="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
-                aria-hidden="true">
-                PROJECTS
-            </span>
-
-
-            <!-- Eyebrow -->
-            <div
-                class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
-
-                <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
-                <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
-                <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
-                <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
-
-                <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
-                    RECENT WORK
-                </span>
-
-            </div>
-
-
-
-            <!-- Main Heading -->
-            <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-
-                <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                    A Glimpse of My
-                </span>
-
-                Latest Projects.
-
-            </h2>
-
-
-            <!-- Description -->
-            <p class="relative mx-auto mt-4 max-w-xl text-[13px] leading-7 text-slate-400 sm:text-sm">
-
-                A look at some of my recent projects, where I put what I've learned
-                into practice and explore different technologies.
-            </p>
-
-        </div>
-
-
-
-
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-            {% for project in projects %}
-
-            {% include "includes/project_card.html" with project=project project_number=forloop.counter %}
-
-            {% empty %}
-
-            <!-- Empty State -->
-            <div class="col-span-full rounded-2xl border border-brand-border bg-brand-card px-6 py-14 text-center">
-
-                <i class="fa-solid fa-folder-open text-3xl text-blue-400"></i>
-
-                <h3 class="mt-4 text-lg font-bold text-white">
-                    Projects coming soon.
-                </h3>
-
-                <p class="mt-2 text-sm text-slate-400">
-                    Published projects will appear here.
-                </p>
-
-            </div>
-
-            {% endfor %}
-
-        </div>
-
-
-
-        <!-- All Projects Link -->
-        <div class="mt-10 text-center">
-
-            <a href="{% url 'about' %}#about-projects" class="btn btn--secondary btn--lg">
-
-                Explore All Projects
-
-                <i class="fa-solid fa-arrow-right btn__icon"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     04. ABOUT PREVIEW
+     03. ABOUT PREVIEW
 ========================================================= -->
 <section id="about" class="relative overflow-hidden bg-surface-1 py-20 lg:py-24">
 
@@ -861,6 +749,115 @@
             <a href="#contact" class="btn btn--ghost mt-8">
                 Let's connect
                 <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     04. FEATURED PROJECTS
+========================================================= -->
+<section id="projects" class="border-b border-brand-border bg-brand-dark/50 py-16 sm:py-20 lg:py-24">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6">
+
+        <!-- Section Heading -->
+        <!-- =============================================
+                     SECTION HEADING
+                ============================================== -->
+        <div data-reveal="up" class="relative mx-auto mb-12 max-w-3xl text-center sm:mb-14">
+
+            <!-- Background Watermark -->
+            <span
+                class="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 select-none whitespace-nowrap text-6xl font-black uppercase tracking-widest text-white/[0.025] sm:text-8xl"
+                aria-hidden="true">
+                PROJECTS
+            </span>
+
+
+            <!-- Eyebrow -->
+            <div
+                class="relative mb-5 inline-flex items-center justify-center border border-blue-400/25 bg-blue-500/[0.05] px-5 py-2">
+
+                <span class="absolute -left-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -right-1 -top-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -left-1 h-2 w-2 bg-cyan-400"></span>
+                <span class="absolute -bottom-1 -right-1 h-2 w-2 bg-cyan-400"></span>
+
+                <span class="relative z-10 text-xs font-bold uppercase tracking-[0.17em] text-slate-300">
+                    RECENT WORK
+                </span>
+
+            </div>
+
+
+
+            <!-- Main Heading -->
+            <h2 class="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+
+                <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                    A Glimpse of My
+                </span>
+
+                Latest Projects.
+
+            </h2>
+
+
+            <!-- Description -->
+            <p class="relative mx-auto mt-4 max-w-xl text-[13px] leading-7 text-slate-400 sm:text-sm">
+
+                A look at some of my recent projects, where I put what I've learned
+                into practice and explore different technologies.
+            </p>
+
+        </div>
+
+
+
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+            {% for project in projects %}
+
+            {% include "includes/project_card.html" with project=project project_number=forloop.counter %}
+
+            {% empty %}
+
+            <!-- Empty State -->
+            <div class="col-span-full rounded-2xl border border-brand-border bg-brand-card px-6 py-14 text-center">
+
+                <i class="fa-solid fa-folder-open text-3xl text-blue-400"></i>
+
+                <h3 class="mt-4 text-lg font-bold text-white">
+                    Projects coming soon.
+                </h3>
+
+                <p class="mt-2 text-sm text-slate-400">
+                    Published projects will appear here.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+
+        <!-- All Projects Link -->
+        <div class="mt-10 text-center">
+
+            <a href="{% url 'about' %}#about-projects" class="btn btn--secondary btn--lg">
+
+                Explore All Projects
+
+                <i class="fa-solid fa-arrow-right btn__icon"></i>
+
             </a>
 
         </div>
