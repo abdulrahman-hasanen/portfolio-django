@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Abdulrahman Hasanen | Software Engineer{% endblock %}
+{% block title %}Abdulrahman Hasanen{% endblock %}
 
-{% block meta_description %}Portfolio of Abdulrahman Hasanen, Computer Science student at Assiut University. Web projects built with Python, Django, HTML, CSS and JavaScript.{% endblock %}
+{% block meta_description %}Portfolio of Abdulrahman Hasanen, Computer Science student at Assiut University. Web projects built with Python, Django,
+HTML, CSS and JavaScript.{% endblock %}
 
 {% block head_extra %}
 <script type="application/ld+json">
@@ -139,6 +140,15 @@
                 </a>
 
 
+                <a href="https://youtube.com/@abdulrahman-hasanen" target="_blank" rel="noopener noreferrer"
+                    aria-label="YouTube" class="flex h-10 w-10 items-center justify-center
+                                    rounded-xl border border-slate-700/60 bg-surface-3
+                                    text-slate-300 transition-all duration-300
+                                    hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
+                    <i class="fa-brands fa-youtube text-base"></i>
+                </a>
+
+
 
                 <a href="https://instagram.com/abdulrahman.hasanen" target="_blank" rel="noopener noreferrer"
                     aria-label="Instagram" class="flex h-10 w-10 items-center justify-center
@@ -165,11 +175,12 @@
                     <i class="fa-brands fa-tiktok text-lg"></i>
                 </a>
 
-                <a href="https://twitter.com/3bdohasanen" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="flex h-10 w-10 items-center justify-center
+                <a href="https://x.com/AbdulHasanen" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
+                    class="flex h-10 w-10 items-center justify-center
                                                     rounded-xl border border-slate-700/60 bg-surface-3
                                                     text-slate-300 transition-all duration-300
                                                     hover:border-blue-500 hover:bg-blue-600/20 hover:text-white">
-                    <i class="fa-brands fa-twitter text-lg"></i>
+                    <i class="fa-brands fa-x-twitter text-lg"></i>
                 </a>
 
             </div>
@@ -209,8 +220,8 @@
                 -translate-y-10
                 items-end justify-center sm:h-[420px]">
 
-                <img src="{% static 'images/pro.webp' %}" width="900" height="900" alt="Abdulrahman Hasanen" loading="eager" fetchpriority="high"
-                    decoding="async" draggable="false" class="h-full w-full object-contain object-bottom
+                <img src="{% static 'images/pro.webp' %}" width="900" height="900" alt="Abdulrahman Hasanen"
+                    loading="eager" fetchpriority="high" decoding="async" draggable="false" class="h-full w-full object-contain object-bottom
                     drop-shadow-[0_15px_30px_rgba(0,0,0,0.35)]
                     transition-transform duration-700 ease-out
                     group-hover:scale-[1.025]">
@@ -223,27 +234,27 @@
             bg-surface-3/95 px-3.5 py-2.5 shadow-xl
             shadow-blue-950/30 backdrop-blur-xl sm:left-[-1%]">
 
-            <i class="fa-solid fa-brain text-xl text-cyan-400"></i>
+                <i class="fa-solid fa-brain text-xl text-cyan-400"></i>
 
-            <span class="text-xs font-bold text-white sm:text-sm">
-                Problem Solving
-            </span>
+                <span class="text-xs font-bold text-white sm:text-sm">
+                    Problem Solving
+                </span>
 
-        </div>
+            </div>
 
-        <!-- Software Development Badge -->
-        <div class="absolute right-0 top-[45%] z-20 flex items-center
+            <!-- Software Development Badge -->
+            <div class="absolute right-0 top-[45%] z-20 flex items-center
             gap-2.5 rounded-xl border border-cyan-500/40 hero-float hero-float-delay
             bg-surface-3/95 px-3.5 py-2.5 shadow-xl
             backdrop-blur-xl sm:right-[-1%]">
 
-            <i class="fa-solid fa-laptop-code text-xl text-blue-400"></i>
+                <i class="fa-solid fa-laptop-code text-xl text-blue-400"></i>
 
-            <span class="text-xs font-bold text-white sm:text-sm">
-                Software Development
-            </span>
+                <span class="text-xs font-bold text-white sm:text-sm">
+                    Software Development
+                </span>
 
-        </div>
+            </div>
 
             <!-- Code Editor Card -->
             <div class="absolute bottom-[8%] left-0 z-20 w-[205px]
@@ -265,11 +276,10 @@
 
 
                 <!-- Editor Code -->
-                <pre class="p-3 font-mono text-xs leading-5 text-slate-200 sm:text-xs"><code><span class="text-pink-400">def</span> <span class="text-cyan-400">build_solution</span>():
+                <pre class="p-3 font-mono text-xs leading-5 text-slate-200 sm:text-xs">
+<code><span class="text-pink-400">def</span> <span class="text-cyan-400">build_solution</span>():
     <span class="text-pink-400">return</span> <span class="text-green-400">"Ideas into reality"</span></code></pre>
-
             </div>
-
         </div>
 
     </div>
@@ -610,8 +620,8 @@
                 <!-- Profile Image -->
                 <div class="relative h-[270px] overflow-hidden sm:h-[285px]">
 
-                    <img src="{% static 'images/photo.webp' %}" width="800" height="800" alt="Abdulrahman Hasanen" loading="lazy"
-                        class="h-full w-full object-cover object-top">
+                    <img src="{% static 'images/photo.webp' %}" width="800" height="800" alt="Abdulrahman Hasanen"
+                        loading="lazy" class="h-full w-full object-cover object-top">
 
                     <!-- Image Overlay -->
                     <div class="absolute inset-0
@@ -1080,6 +1090,21 @@
 
                     </a>
 
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/201063746073" target="_blank" rel="noopener noreferrer"
+                        class="group flex items-center gap-3 text-sm text-slate-300 transition-colors hover:text-emerald-300">
+
+                        <span
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] text-emerald-400 transition-colors group-hover:bg-emerald-400/10">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+
+                        <span>
+                            WhatsApp
+                        </span>
+
+                    </a>
+
                 </div>
 
 
@@ -1173,7 +1198,8 @@
 
 
                 <!-- Contact Form -->
-                <form id="contact-form" data-contact-form data-endpoint="{% url 'contact' %}" action="{% url 'contact' %}" method="post" class="space-y-3" novalidate>
+                <form id="contact-form" data-contact-form data-endpoint="{% url 'contact' %}"
+                    action="{% url 'contact' %}" method="post" class="space-y-3" novalidate>
 
                     {% csrf_token %}
 
@@ -1241,7 +1267,8 @@
 
                     <!-- Status -->
                     <div id="contact-status" role="status" aria-live="polite"
-                        class="{% if messages %}{% for m in messages %}{% if m.level_tag == 'success' %}border-emerald-400/30 bg-emerald-500/10 text-emerald-200{% else %}border-red-400/30 bg-red-500/10 text-red-200{% endif %}{% endfor %}{% else %}hidden{% endif %} rounded-lg border px-3 py-2 text-xs leading-6">{% for m in messages %}{{ m }}{% endfor %}</div>
+                        class="{% if messages %}{% for m in messages %}{% if m.level_tag == 'success' %}border-emerald-400/30 bg-emerald-500/10 text-emerald-200{% else %}border-red-400/30 bg-red-500/10 text-red-200{% endif %}{% endfor %}{% else %}hidden{% endif %} rounded-lg border px-3 py-2 text-xs leading-6">
+                        {% for m in messages %}{{ m }}{% endfor %}</div>
 
 
 
